@@ -1,0 +1,36 @@
+{
+    "id": "OLA001007",
+    "type": "video",
+    "alignment": [
+        {
+            "source_segment": {
+                "start": 0,
+                "end": 86
+            },
+            "target_segment": {
+                "timestamp": "https://www.youtube.com/watch?v=OmvX6l_Ewzg&t?t=4140",
+                "src_url": "https://www.youtube.com/watch?v=OmvX6l_Ewzg&t"
+            }
+        },
+        {
+            "source_segment": {
+                "start": 86,
+                "end": 137
+            },
+            "target_segment": {
+                "timestamp": "https://www.youtube.com/watch?v=OmvX6l_Ewzg&t?t=4165",
+                "src_url": "https://www.youtube.com/watch?v=OmvX6l_Ewzg&t"
+            }
+        },
+        {
+            "source_segment": {
+                "start": 137,
+                "end": 290
+            },
+            "target_segment": {
+                "timestamp": "https://www.youtube.com/watch?v=OmvX6l_Ewzg&t?t=4179",
+                "src_url": "https://www.youtube.com/watch?v=OmvX6l_Ewzg&t"
+            }
+        }
+    ]
+}

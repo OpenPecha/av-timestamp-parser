@@ -33,7 +33,36 @@ def merge_left_over(p_tag, reformated_xml):
         p_tag = re.sub(left_over_text, "", p_tag)
         reformated_xml += f"{p_tag}\n"
     return reformated_xml
-    
+
+def split_spans(p_tag):
+    p_tag_splited = ""
+    p_tag_parts = re.split("(<span.+?</span>)", p_tag)
+    cur_p_tag = "<p>"
+    for p_tag_part in p_tag_parts[1:]:
+        if "<span" not in p_tag_part and "p>" not in p_tag_part:
+            cur_p_tag += f"{p_tag_part}</p>\n"
+            p_tag_splited += cur_p_tag
+            cur_p_tag = "<p>"
+        else:
+            cur_p_tag += p_tag_part
+    p_tag_splited += f"{cur_p_tag}\n"
+    return p_tag_splited
+
+def is_multispan_p_tag(p_tag):
+    if p_tag.count("span") > 2:
+        return True
+    return False
+
+def fix_multispan_p_tag(reformated_xml):
+    fixed_xml = ""
+    p_tags = reformated_xml.splitlines()
+    for p_tag in p_tags:
+        if is_multispan_p_tag(p_tag):
+            fixed_xml += split_spans(p_tag)
+        else:
+            fixed_xml += f"{p_tag}\n"
+    return fixed_xml
+
 
 def beautify_xml(xml_text):
     beautified_xml = re.sub("</p>", "</p>\n", xml_text)
@@ -50,6 +79,7 @@ def beautify_xml(xml_text):
             reformated_xml += f"{p_tag}\n"
     reformated_xml = reformated_xml.replace("<p><span></span></p>" ,"")
     reformated_xml = reformated_xml.replace("\n\n", "")
+    reformated_xml = fix_multispan_p_tag(reformated_xml)
     return reformated_xml
 
 

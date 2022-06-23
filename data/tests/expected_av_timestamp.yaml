@@ -1,0 +1,31 @@
+id: a9c5339304f348debe49f79e53267d67
+annotation_type: AVTimestamp
+revision: '00001'
+annotations:
+  bbccc30da80a4dec8db4b3d698a1ed02:
+    id: bbccc30da80a4dec8db4b3d698a1ed02
+    span:
+      start: 0
+      end: 86
+      errors: {}
+    metadata: {}
+    timestamp: https://www.youtube.com/watch?v=OmvX6l_Ewzg&t?t=4140
+    src_url: https://www.youtube.com/watch?v=OmvX6l_Ewzg&t
+  5a1776cad55041119f98edf756fcf068:
+    id: 5a1776cad55041119f98edf756fcf068
+    span:
+      start: 86
+      end: 137
+      errors: {}
+    metadata: {}
+    timestamp: https://www.youtube.com/watch?v=OmvX6l_Ewzg&t?t=4165
+    src_url: https://www.youtube.com/watch?v=OmvX6l_Ewzg&t
+  08b67f4616db4d1e93ef0cf3f2b6fc3d:
+    id: 08b67f4616db4d1e93ef0cf3f2b6fc3d
+    span:
+      start: 137
+      end: 290
+      errors: {}
+    metadata: {}
+    timestamp: https://www.youtube.com/watch?v=OmvX6l_Ewzg&t?t=4179
+    src_url: https://www.youtube.com/watch?v=OmvX6l_Ewzg&t
