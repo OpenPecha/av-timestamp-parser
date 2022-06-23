@@ -11,7 +11,7 @@ from openpecha.core.annotations import BaseAnnotation, Span
 from openpecha.core.layer import LayerEnum, Layer
 from openpecha.core.metadata import OpenPechaMetadata, InitialCreationType
 from openpecha.core.pecha import OpenPechaFS
-from openpecha.utils import dump_yaml
+
 
 
 
@@ -46,8 +46,6 @@ def get_p_tag_text(p_tag):
 
 
 def get_timestamp_layer(xml):
-    # extended_LayerEnum = [(l.name, l.value) for l in LayerEnum] + [("av_timestamp", "AVTimestamp")]
-    # LayerEnum = Enum("LayerEnum", extended_LayerEnum)
     time_stamp_layer = ExtentedLayer(annotation_type=LayerEnum.av_timestamp)
     char_walker = 0
     base_text = ""
