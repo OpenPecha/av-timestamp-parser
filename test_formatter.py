@@ -7,7 +7,6 @@ def test_formatter():
     xml = Path('./data/tests/test_xml.xml').read_text(encoding='utf-8')
     timestamp_layer, base_text = get_timestamp_layer(xml)
     timestamp_layer = dict(timestamp_layer)
-    Path('base.txt').write_text(base_text, encoding='utf-8')
     expected_timestamp_layer = load_yaml(Path('./data/tests/expected_av_timestamp.yaml'))
     expected_base_text = Path('./data/tests/expected_base.txt').read_text(encoding='utf-8')
     assert expected_base_text == base_text
