@@ -7,7 +7,7 @@ from openpecha.blupdate import PechaBaseUpdate
 from openpecha.core.pecha import OpenPechaFS
 from openpecha.utils import dump_yaml, load_yaml
 
-from json_serializer import get_base_names
+from text2AV_alignment_serializer import get_base_names
 
 logging.basicConfig(filename="./data/transfer_issue_text.log", level=logging.INFO,)
 
@@ -17,9 +17,6 @@ def has_transfer_issue(derge_durchen_layer):
     if "fail" in str(derge_durchen_layer):
         return True
     return False
-        
-    
-    
 
 def transfer_timestamp_layer_2_open_edition_opf(open_edition_opf_path, initial_av_opf_path):
     oe_pecha_id = open_edition_opf_path.stem
