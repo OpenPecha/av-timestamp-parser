@@ -43,7 +43,7 @@ def get_text2av_alignment(pecha_id, av_timestamp_layer):
 
 
 
-def serialize_av_layer_to_text2av_response(opf_id, opf_path, json_path):
+def serialize_av_layer_to_text2av_alignment(opf_id, opf_path, json_path):
     pecha = OpenPechaFS(opf_id, opf_path)
     base_names = get_base_names(pecha.opf_path)
     for base_name in base_names:
