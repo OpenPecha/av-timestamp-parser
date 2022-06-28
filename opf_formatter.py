@@ -9,7 +9,7 @@ from pathlib import Path
 
 from openpecha.core.annotations import BaseAnnotation, Span
 from openpecha.core.layer import LayerEnum, Layer
-from openpecha.core.metadata import OpenPechaMetadata, InitialCreationType
+from openpecha.core.metadata import InitialPechaMetadata, InitialCreationType
 from openpecha.core.pecha import OpenPechaFS
 
 
@@ -68,7 +68,7 @@ def get_timestamp_layer(xml):
 
 def create_opf(xml_path, opf_path):
     timestamp_xml = xml_path.read_text(encoding="utf-8")
-    metadata = OpenPechaMetadata(initial_creation_type=InitialCreationType.input)
+    metadata = InitialPechaMetadata(initial_creation_type=InitialCreationType.input)
     pecha = OpenPechaFS(metadata=metadata, base={}, layers=defaultdict(dict))
     timestamp_layer, base_text = get_timestamp_layer(timestamp_xml)
     base_name = pecha.set_base(base_text)

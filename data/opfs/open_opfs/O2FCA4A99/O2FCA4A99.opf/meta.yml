@@ -1,1 +1,23 @@
 id: O2FCA4A99
+source: https://library.bdrc.io
+source_file: null
+initial_creation_type: input
+imported: '2022-06-27T04:24:43+00:00'
+last_modified: '2022-06-27T10:04:32.228101+00:00'
+parser: null
+source_metadata:
+  id: null
+  base:
+    6ABB:
+      image_group_id: null
+      title: བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་འཇུག་པ་བཞུགས་སོ།
+      total_pages: 75
+      order: 114
+      base_file: 6ABB.txt
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null

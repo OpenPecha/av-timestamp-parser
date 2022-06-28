@@ -44,7 +44,7 @@ def transfer_timestamp_layer(src_opf, trg_opf, src_base_name, trg_base_name):
 
 if __name__ == "__main__":
     open_edition_opf_path = Path('./data/opfs/open_opfs/O2FCA4A99/O2FCA4A99.opf')
-    initial_av_opf_path = Path('./data/opfs/initial_opfs/OC18CFCB2/OC18CFCB2.opf')
+    initial_av_opf_path = Path('./data/opfs/initial_opfs/I0CB5201C/I0CB5201C.opf')
     transfer_timestamp_layer_2_open_edition_opf(open_edition_opf_path, initial_av_opf_path)
     
 
