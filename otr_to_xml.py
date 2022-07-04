@@ -10,16 +10,19 @@ def is_link_tag(p_tag):
     return False
 
 def is_left_over_p_tag(p_tag):
-    if "span" not in p_tag or not re.search("<p><span", p_tag):
-        return True
-    return False
+    if "span" in p_tag or re.search("<p><span", p_tag) or re.search("<p><b", p_tag):
+        return False
+    return True
 
 def get_last_p_tag(reformated_xml):
     p_tags = reformated_xml.splitlines()
-    return p_tags[-1]
+    if p_tags:
+        return p_tags[-1]
+    return ""
 
 
 def merge_left_over(p_tag, reformated_xml):
+    print(p_tag)
     if "span" not in p_tag:
         left_over_text = re.search("<p>(.+?)</p>", p_tag).group(1)
         last_p_tag = get_last_p_tag(reformated_xml)
@@ -101,6 +104,6 @@ def otr_to_xml(otr_file_path):
 
 
 if __name__ == "__main__":
-    otr_file_path = Path('./data/otr/གོང་ས་མཆོག་གི་སྤྱོད་འཇུག་བཀའ་ཁྲིད.otr')
+    otr_file_path = Path('./data/otr/མཁན་པོ་ཚུལ་ཁྲིམས་བློ་གྲོས།.otr')
     xml_text = otr_to_xml(otr_file_path)
     Path(f'./data/xml/{otr_file_path.stem}.xml').write_text(xml_text, encoding='utf-8')

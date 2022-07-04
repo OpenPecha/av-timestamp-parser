@@ -77,6 +77,6 @@ def create_opf(xml_path, opf_path):
 
         
 if __name__ == "__main__":
-    xml_path = Path('./data/xml/གོང་ས་མཆོག་གི་སྤྱོད་འཇུག་བཀའ་ཁྲིད.xml')
+    xml_path = Path('./data/xml/new_xml.xml')
     opf_path = Path('./data/opfs/initial_opfs/')
     create_opf(xml_path, opf_path)
